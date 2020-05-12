@@ -1,0 +1,26 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+}
+
+.input-wrapper{
+  .input-label {
+    color: blue;
+  }
+}
+
+.rc-radios-items-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .custom-control {
+    border: 1px solid black;
+    padding: 0;
+    .rc-radios-radio-item-content-wrapper {
+      background-color: red;
+    }
+    .rc-radios-radio-input:checked + .rc-radios-radio-item-content-wrapper {
+      background-color: blue;
+    }
+  }
+}

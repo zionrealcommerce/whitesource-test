@@ -1,0 +1,25 @@
+<div id="home-page">
+  <p>home works!</p>
+
+  <div class="input-wrapper">
+    <br/>
+    <br/>
+    <lib-rc-input [elementId]="'firstName'" [label]="'first name'"></lib-rc-input>
+    <br/>
+    <br/>
+  </div>
+
+  <div class="radios-wrapper">
+    value is :{{radioControl.value}} <br/>
+    <lib-rc-radios [control]="radioControl" [elementId]="'myRadioButtonID'" [items]="radioItems" [radiosName]="'myRadiosName'">
+      <lib-rc-radio>radio 1</lib-rc-radio>
+      <lib-rc-radio>radio 2</lib-rc-radio>
+      <lib-rc-radio>radio 3</lib-rc-radio>
+    </lib-rc-radios>
+  </div>
+</div>
+
+<button (click)="showPopup = !showPopup">OPEN</button>
+<app-general-popup #generalPopup [show]="showPopup">
+  <app-home-popup *ngIf="generalPopup.show"></app-home-popup>
+</app-general-popup>
